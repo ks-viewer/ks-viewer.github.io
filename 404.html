@@ -6,7 +6,7 @@ permalink: /404.html
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>404 - Natalia i Krzysztof</title>
+  <title>404 - Ks Media Share</title>
   <base href="/">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -17,7 +17,7 @@ permalink: /404.html
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      background: url('https://nataliaikrzysiek.github.io/NxK-34.jpg') center center / cover no-repeat fixed;
+      background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%);
       text-align: center;
       padding: 20px;
       position: relative;
@@ -26,33 +26,38 @@ permalink: /404.html
       content: '';
       position: absolute;
       inset: 0;
-      background: rgba(255, 255, 255, 0.65);
+      background: rgba(0, 0, 0, 0.1);
       z-index: 0;
     }
     body > * {
       position: relative;
       z-index: 1;
     }
-    .logo { 
-      width: 120px; 
-      height: 120px;
+    .logo {
+      width: 80px;
+      height: 80px;
       border-radius: 50%;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-      margin-bottom: 24px;
-      object-fit: cover;
+      background: rgba(255,255,255,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      font-size: 28px;
+      font-weight: bold;
+      color: white;
     }
     h1 { 
       font-size: 72px; 
-      color: #3b82f6; 
+      color: white; 
       margin-bottom: 8px; 
     }
     h2 { 
       font-size: 24px; 
-      color: #374151; 
+      color: rgba(255,255,255,0.9); 
       margin-bottom: 16px; 
     }
     p { 
-      color: #6b7280; 
+      color: rgba(255,255,255,0.75); 
       margin-bottom: 24px; 
       max-width: 400px; 
       line-height: 1.5;
@@ -72,20 +77,20 @@ permalink: /404.html
       box-shadow: 0 4px 20px rgba(59, 130, 246, 0.2);
     }
     .button {
-      background: #3b82f6;
-      color: white;
+      background: white;
+      color: #1e40af;
       padding: 14px 28px;
       border-radius: 12px;
       text-decoration: none;
       font-weight: 600;
       font-size: 16px;
       transition: all 0.2s;
-      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
     .button:hover { 
-      background: #2563eb; 
+      background: #f0f7ff; 
       transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
     }
     .button:active {
       transform: translateY(0);
@@ -94,42 +99,23 @@ permalink: /404.html
       h1 { font-size: 56px; }
       h2 { font-size: 20px; }
       .countdown { font-size: 48px; width: 80px; height: 80px; }
-      .logo { width: 100px; height: 100px; }
+      .logo { width: 80px; height: 80px; }
     }
   </style>
 </head>
 <body>
-  <img class="logo" src="https://nataliaikrzysiek.github.io/logo.jpg" alt="Natalia i Krzysztof" onerror="this.style.display='none'">
+  <div class="logo">KM</div>
   <h1>404</h1>
   <h2 id="title"></h2>
   <p id="message"></p>
   <div class="countdown" id="countdown">3</div>
-  <a class="button" id="button" href="https://nataliaikrzysiek.github.io/"></a>
+  <a class="button" id="button" href="https://ks-viewer.github.io//"></a>
   
   <script>
-    // Translations
-    const translations = {
-      pl: {
-        title: 'Strona nie znaleziona',
-        message: 'Nie martw się! Za chwilę zostaniesz przekierowany na stronę główną.',
-        button: 'Wróć do strony głównej'
-      },
-      en: {
-        title: 'Page not found',
-        message: "Don't worry! You will be redirected to the home page shortly.",
-        button: 'Return to home'
-      }
-    };
-    
-    // Get language from localStorage (same key as React app)
-    const lang = localStorage.getItem('ks-uploader-language') || 'pl';
-    const t = translations[lang] || translations.pl;
-    
-    // Set translated content
-    document.getElementById('title').textContent = t.title;
-    document.getElementById('message').textContent = t.message;
-    document.getElementById('button').textContent = t.button;
-    document.documentElement.lang = lang;
+    document.getElementById('title').textContent = 'Strona nie znaleziona';
+    document.getElementById('message').textContent = 'Nie martw się! Za chwilę zostaniesz przekierowany na stronę główną.';
+    document.getElementById('button').textContent = 'Wróć do strony głównej';
+    document.documentElement.lang = 'pl';
     
     // Countdown and redirect
     let seconds = 3;
@@ -141,7 +127,7 @@ permalink: /404.html
       
       if (seconds <= 0) {
         clearInterval(timer);
-        window.location.href = 'https://nataliaikrzysiek.github.io/';
+        window.location.href = 'https://ks-viewer.github.io/';
       }
     }, 1000);
   </script>
